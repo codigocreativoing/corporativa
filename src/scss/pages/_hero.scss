@@ -1,0 +1,200 @@
+.hero{
+  background-image: imgPath('imgHero.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+  &-logo{
+    @include centerFlex;
+
+  }
+  &-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1rem;
+    text-align: right;
+    color: $rojoOxford;
+    //font-family: $ftOswald;
+    &_principal{
+      //background-color: rgb(90, 11, 79);
+      order: 2;
+      letter-spacing: 0.35rem;
+    }
+    &_secondary{
+      //background-color: rgb(10, 126, 78);
+      order: 0;
+      letter-spacing: .055rem;
+
+    }
+    &_emphasis{
+      //background-color: rgb(41, 8, 133);
+      order: 1;
+      letter-spacing: -.1rem;
+      margin:-.45rem 0;
+      color: $azulOxford;
+    }
+  }
+  &-phrase{
+    // padding-top: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &_title{
+      // background-color: red;
+      width: 90%;
+      margin-bottom: -1.5rem;
+      color: lighten(black, 20%);
+      // text-align: center;
+      // font-weight: $normal;
+      // font-size: $t2;
+    }
+    &_description{
+      color: lighten(black, 20%);
+      // color:$clSecondary;
+      font-weight: $ligth;
+      font-size: $t2;
+    }
+    &_slogan{
+      color: $azulOxford;
+    }
+  }
+
+}
+@include mQ(xlS){
+  .hero-logo{
+    margin-right: 30%;
+  }
+  .hero-phrase{
+    &_title{
+      // background-color: steelblue;
+    }
+    &_description{
+      // background-color: cadetblue;
+    }
+    &_slogan{
+    }
+  }
+}
+@include mQ(largeS){
+  .hero-logo{
+    margin-right: 0;
+  }
+  .hero-phrase{
+    &_title{
+      // background-color: red;
+    }
+    &_description{
+      // background-color: orange;
+    }
+    &_slogan{
+    }
+  }
+}
+@include mQ(wideS){
+  .hero-phrase{
+    &_title{
+      // background-color: green;
+    }
+    &_description{
+      // background-color: yellowgreen;
+      font-size: 32px;
+    }
+    &_slogan{
+    }
+  }
+}
+@include mQ(mediumS){
+  .hero-phrase{
+    &_title{
+      // background-color: violet;
+      font-size: 28px;
+    }
+    &_description{
+      // background-color: purple;
+      font-size: 22px;
+    }
+    &_slogan{
+      color: $azulOxford;
+    }
+  }
+}
+@include mQ(smallS){
+  .hero-phrase{
+    // background-color: red;
+    // padding-top: 2rem;
+    // margin-top: 0;
+    &_title{
+      // background-color: orangered;
+      width: 100%;
+      // margin-bottom: -1.5rem;
+      // color: lighten($clSecondary, 0);
+      // font-weight: $normal;
+      font-size: 24px;
+      text-align: center;
+    }
+    &_description{
+      // background-color: orange;
+      font-size: 20px;
+    }
+    &_slogan{
+      color: $azulOxford;
+    }
+  }
+}
+@include mQ(xsS){
+  .hero{
+    grid-template-rows: 50% 30% 20%;
+    // @include centerFlex;
+    flex-wrap: wrap;
+    &-logo{
+      // @include lborde($color:blue);
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+    &-title{
+      // @include lborde;
+      grid-column:  1 / -1;
+      grid-row: 2 / 3;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      margin-right: 0;
+      text-align: center;
+      // color: $rojoOxford;
+    }
+    &-phrase{
+      // background-color: violet;
+      // height: 100%;
+      grid-column: span 12;
+      grid-row: 3;
+      width: 100%;
+      // margin-top: 0;
+
+      &_title{
+        // background-color: blue;
+        // margin-top: -2rem;
+        width: 100%;
+        font-weight: $normal;
+        font-size: 20px;
+        color:white;
+      }
+      &_description{
+        // background-color: orange;
+        margin-top: .8rem;
+        width: 100%;
+        font-size: 22px;
+        line-height: 20px;
+        color: white;
+      }
+      &_slogan{
+        margin-top: .5rem;
+      }
+    }
+  }
+}
+
+
