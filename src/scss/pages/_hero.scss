@@ -1,199 +1,313 @@
-.hero{
-  background-image: imgPath('imgHero.jpg');
+.landingWrap{
+  background-color: $color;
+  background-image: url('./images/fondo320.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  // height: 100vh;
+  &-infoCorp{
+    // background-color: gold;
 
-  &-logo{
-    @include centerFlex;
-
-  }
-  &-title{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 1rem;
-    text-align: right;
-    color: $rojoOxford;
-    //font-family: $ftOswald;
-    &_principal{
-      //background-color: rgb(90, 11, 79);
-      order: 2;
-      letter-spacing: 0.35rem;
-    }
-    &_secondary{
-      //background-color: rgb(10, 126, 78);
-      order: 0;
-      letter-spacing: .055rem;
-
-    }
-    &_emphasis{
-      //background-color: rgb(41, 8, 133);
-      order: 1;
-      letter-spacing: -.1rem;
-      margin:-.45rem 0;
-      color: $azulOxford;
-    }
-  }
-  &-phrase{
-    // padding-top: 2rem;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    &_title{
-      // background-color: red;
-      width: 90%;
-      margin-bottom: -1.5rem;
-      color: lighten(black, 20%);
-      // text-align: center;
-      // font-weight: $normal;
-      // font-size: $t2;
+    flex-wrap: wrap;
+    .logo{
+      background-image: url('./images/logoCompleto.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-left: -5rem;
+      height: 50%;
+      width: 50%;
     }
-    &_description{
-      color: lighten(black, 20%);
-      // color:$clSecondary;
-      font-weight: $ligth;
-      font-size: $t2;
-    }
-    &_slogan{
-      color: $azulOxford;
+    .slogan{
+      margin-left: 1rem;
+      border-left: 1.5px solid $primario;
+      h2, p{
+        margin-left: 1rem;
+      }
+      h2{
+        font-size: 1.3rem
+      }
+      p{
+        font-size: .8rem;
+        line-height: 1rem;
+      }
     }
   }
+  &-promo{
+    //background-color: fuchsia;
+    display: flex;
+    align-items: center;
+    // margin-top: 1rem;
+    // background-image: url('./images/PromoResp.svg');
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // min-height: 10%;
+    // max-width: 90%;
+  }
+  &-action{
+    // background-color: dodgerblue;
+    @include centerFlex;
+    flex-direction: column;
+    overflow: hidden;
+    .icon{
+      font-size: 3rem;
+      z-index: 11;
+    }
+    .intro{
+      font-size: .8rem;
+      text-align: center;
 
+      p{
+        line-height: 1rem;
+      }
+
+    }
+    .action{
+      @include centerFlex;
+      // background-color: teal;
+      .flecha{
+        width: 5rem;
+        height:3rem;
+        // background-color: darkviolet;
+        background-image: url('./images/flechaVerde.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        animation: flecha 1s infinite ease;
+        @keyframes flecha{
+          to{
+            transform: scale(2)
+          }
+        }
+      }
+    }
+    .actButton{
+      margin-top: 1rem;
+      width: 9rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      background-color: $primario;
+      &:hover{
+        background-color: $secundario;
+        a{
+          color: $clTextoGen;
+        }
+      }
+      a{
+        color: $color;
+      }
+    }
+  }
 }
-@include mQ(xlS){
-  .hero-logo{
-    margin-right: 30%;
-  }
-  .hero-phrase{
-    &_title{
-      // background-color: steelblue;
-    }
-    &_description{
-      // background-color: cadetblue;
-    }
-    &_slogan{
-    }
-  }
-}
-@include mQ(largeS){
-  .hero-logo{
-    margin-right: 0;
-  }
-  .hero-phrase{
-    &_title{
-      // background-color: red;
-    }
-    &_description{
-      // background-color: orange;
-    }
-    &_slogan{
-    }
-  }
-}
-@include mQ(wideS){
-  .hero-phrase{
-    &_title{
-      // background-color: green;
-    }
-    &_description{
-      // background-color: yellowgreen;
-      font-size: 32px;
-    }
-    &_slogan{
-    }
-  }
-}
-@include mQ(mediumS){
-  .hero-phrase{
-    &_title{
-      // background-color: violet;
-      font-size: 28px;
-    }
-    &_description{
-      // background-color: purple;
-      font-size: 22px;
-    }
-    &_slogan{
-      color: $azulOxford;
-    }
-  }
+
+@include mQ(xsS){
 }
 @include mQ(smallS){
-  .hero-phrase{
-    // background-color: red;
-    // padding-top: 2rem;
-    // margin-top: 0;
-    &_title{
-      // background-color: orangered;
+  .landingWrap{
+  &-infoCorp{
+    .logo{
+      // background-color: gold;
       width: 100%;
-      // margin-bottom: -1.5rem;
-      // color: lighten($clSecondary, 0);
-      // font-weight: $normal;
-      font-size: 24px;
-      text-align: center;
+      margin-left: 4rem;
+      background-position: left;
+      display: flex;
+      justify-content: flex-start;
     }
-    &_description{
-      // background-color: orange;
-      font-size: 20px;
+    .slogan{
+      width: 100%;
+      margin-left: 4rem;
+      h2{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+      }
+      p{
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
     }
-    &_slogan{
-      color: $azulOxford;
+  }
+  &-promo{
+    img{
+      margin-top: 1rem;
+      height: 180%;
+    }
+  }
+  &-action{
+    .icon{
+      font-size: 4rem;
+    }
+    .intro{
+      p{
+        line-height: 1rem;
+      }
+
+    }
+    .action{
+      margin-left: -6rem;
     }
   }
 }
-@include mQ(xsS){
-  .hero{
-    grid-template-rows: 50% 30% 20%;
-    // @include centerFlex;
+}
+@include mQ(mediumS){
+  .landingWrap{
+    background-image: url('./images/fondo480.jpg');
+    background-size: cover;
+    background-position: center right;
+  &-infoCorp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    &-logo{
-      // @include lborde($color:blue);
-      grid-column: 1 / -1;
-      grid-row: 1 / 2;
-    }
-    &-title{
-      // @include lborde;
-      grid-column:  1 / -1;
-      grid-row: 2 / 3;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      align-items: center;
-      margin-right: 0;
-      text-align: center;
-      // color: $rojoOxford;
-    }
-    &-phrase{
-      // background-color: violet;
-      // height: 100%;
-      grid-column: span 12;
-      grid-row: 3;
+    .logo{
+      // background-color: gold;
       width: 100%;
-      // margin-top: 0;
-
-      &_title{
-        // background-color: blue;
-        // margin-top: -2rem;
-        width: 100%;
-        font-weight: $normal;
-        font-size: 20px;
-        color:white;
+      margin-left: 4rem;
+      background-position: left;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .slogan{
+      width: 100%;
+      margin-left: 4rem;
+      h2, p{
+        margin-left: 1rem;
       }
-      &_description{
-        // background-color: orange;
-        margin-top: .8rem;
-        width: 100%;
-        font-size: 22px;
-        line-height: 20px;
-        color: white;
+      h2{
+        font-size: 1.8rem;
+        line-height: 2.8rem;
       }
-      &_slogan{
-        margin-top: .5rem;
+      p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
       }
     }
+  }
+  &-promo{
+    display: flex;
+    align-items: center;
+    img{
+      margin-top: 2.5rem;
+      height: 200%;
+    }
+  }
+  &-action{
+    @include centerFlex;
+    flex-direction: column;
+    .icon{
+      font-size: 4rem;
+      z-index: 11;
+    }
+    .intro{
+      font-size: 1rem;
+      text-align: center;
+
+      p{
+        line-height: 1.5rem;
+      }
+
+    }
+    .action{
+      @include centerFlex;
+      margin-left: -6rem;
+    }
+    .actButton{
+      margin-top: 1rem;
+      width: 9rem;
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      background-color: $primario;
+      a{
+        color: $color;
+      }
+    }
+  }
+}
+}
+@include mQ(wideS){
+  .landingWrap{
+    background-image: url('./images/fondo768.jpg');
+  &-infoCorp{
+    .logo{
+      width: 20%;
+      margin-left: 0;
+      background-position: center;
+    }
+    .slogan{
+      width: 80%;
+      margin-left: 0;
+      h2{
+        font-size: 2.2rem;
+      }
+    }
+  }
+  &-promo{
+    img{
+      margin-top: .7rem;
+      height: 270%;
+    }
+  }
+  &-action{
+    margin-top: -2rem;
+    .icon{
+      font-size: 5rem;
+    }
+    .intro{
+      display: flex;
+      justify-content: center;
+      width: 60%;
+    }
+  }
+}
+}
+@include mQ(largeS){
+  .landingWrap{
+    background-image: url('./images/fondoWide.jpg');
+  &-infoCorp{
+    .slogan{
+      h2{
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+      p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+  &-promo{
+    display: flex;
+    align-items: center;
+    img{
+      margin-top: .5rem;
+      margin-left: 1rem;
+      height: 300%;
+    }
+  }
+  &-action{
+    .intro{
+      width: 45%;
+
+      p{
+        line-height: 1.5rem;
+      }
+
+    }
+  }
+}
+}
+@include mQ(xlS){
+  body{
+    // background-color: fuchsia;
   }
 }
 

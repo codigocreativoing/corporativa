@@ -1,0 +1,15 @@
+extends ../includes/layout
+
+append config
+  -pageTitle= "Nuestros servicios"
+  -description="Soluciones en el ambiente WEB para empresas que estan dispuestas a innovar y mejorar la presencia en internet"
+  -sites=['index.html', 'index.html#inicio', 'https://codigocreativo.com.co/acerca-de/', 'https://codigocreativo.com.co/blog/', 'https://codigocreativo.com.co/contacto/', './portafolio.html']
+
+block content
+  section.portafolio
+    .portafolio-container
+      .portafolio-titulo
+        .logo
+        h3 Nuestros Servicios
+      .portafolio-book
+        <iframe style='width:900px;height:500px' src='http://online.pubhtml5.com/nlak/ntem/'  seamless='seamless' scrolling='no' frameborder='0' allowtransparency='true' allowfullscreen='true' ></iframe>

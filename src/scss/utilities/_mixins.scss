@@ -39,37 +39,37 @@
 }
 @mixin mQ($media) {
   @if $media==xsS {
-    @media screen and (max-width:$xsScreen) {
+    @media screen and (min-width:$xsScreen) {
       @content;
     }
   }
   @else if $media==smallS {
-    @media screen and (max-width:$smallScreen) {
+    @media screen and (min-width:$smallScreen) {
       @content;
     }
   }
   @else if $media==mediumS {
-    @media screen and (max-width:$mediumScreen) {
+    @media screen and (min-width:$mediumScreen) {
       @content;
     }
   }
   @else if $media==wideS {
-    @media screen and (max-width:$wideScreen) {
+    @media screen and (min-width:$wideScreen) {
       @content;
     }
   }
   @else if $media==largeS {
-    @media screen and (max-width:$largeScreen) {
+    @media screen and (min-width:$largeScreen) {
       @content;
     }
   }
   @else if $media==xlS {
-    @media screen and (max-width:$xlScreen) {
+    @media screen and (min-width:$xlScreen) {
       @content;
     }
   }
   @else if $media==opS {
-    @media screen and (max-width:$opScreen) {
+    @media screen and (min-width:$opScreen) {
       @content;
     }
   }

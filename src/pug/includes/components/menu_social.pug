@@ -4,4 +4,5 @@ mixin social(sociales)
     ul.social-list
       each item in sociales
         li.social-list__item
-          a.social-list__link(href=`${item[0]}`) #[i.fa(class="fa-"+`${item[1]}`)]
+          a.social-list__link(href=`${item[0]}` target=`${item[2]}`) 
+            i.fa(class="fa-"+`${item[1]}`)

@@ -1,7 +1,7 @@
 
 //GENERALES
 //path
-$path: '../../images/';
+$path: './images/';
 
 //Tamaño de fuente para el proyecto
 //$fsBase:62.5%;
@@ -26,16 +26,25 @@ $ftroboto: 'Roboto', sans-serif;
 $ftOswald: 'Oswald', sans-serif;
 
 // Variables de color
-$color     : #E06D19;
-$secundario: hsl(270, 61%, 38%);
+$color     : rgb(26, 26, 26);
+$primario  : rgb(116, 178, 131);
+$secundario: rgb(44, 55, 82);
 $resalte   : rgb(184, 214, 64);
-$clAlterno : #8CA22A;
+$clAlterno : rgb(140, 162, 42);
 
 // variables de media query
-$xsScreen:470px;
-$smallScreen : 520px;
-$mediumScreen: 750px;
-$wideScreen  : 1024px;
-$largeScreen : 1280px;
-$xlScreen: 1366px;
-$opScreen:1480px;
+// $xsScreen:470px;
+// $smallScreen : 520px;
+// $mediumScreen: 750px;
+// $wideScreen  : 1024px;
+// $largeScreen : 1280px;
+// $xlScreen: 1366px;
+// $opScreen:1480px;
+
+$xsScreen:320px;
+$smallScreen : 480px;
+$mediumScreen: 600px;
+$wideScreen  : 760px;
+$largeScreen : 990px;
+$xlScreen: 1200px;
+$opScreen:1400px;
