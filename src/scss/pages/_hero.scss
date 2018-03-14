@@ -1,9 +1,11 @@
-.landingWrap{
-  background-color: $color;
-  background-image: url('./images/fondo320.jpg');
+.heroWrap{
+  // background-color: red;
+  background-image: url('./images/FondosPropCC.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  color: $clTextoGen;
   // height: 100vh;
   &-infoCorp{
     // background-color: gold;
@@ -13,104 +15,47 @@
     align-items: center;
     flex-wrap: wrap;
     .logo{
+      // background-color: darkolivegreen;
       background-image: url('./images/logoCompleto.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      margin-left: -5rem;
-      height: 50%;
-      width: 50%;
+      //margin-left: -5rem;
+      height: 60%;
+      width: 60%;
     }
     .slogan{
-      margin-left: 1rem;
-      border-left: 1.5px solid $primario;
+      // background-color: darkmagenta;
+      margin: 0 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // border-left: 1.5px solid $primario;
       h2, p{
-        margin-left: 1rem;
+        text-align: center;
       }
       h2{
+        // background-color: rebeccapurple;
         font-size: 1.3rem
       }
       p{
+        // background-color: peru;
         font-size: .8rem;
         line-height: 1rem;
       }
     }
   }
-  &-promo{
-    //background-color: fuchsia;
-    display: flex;
-    align-items: center;
-    // margin-top: 1rem;
-    // background-image: url('./images/PromoResp.svg');
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // min-height: 10%;
-    // max-width: 90%;
-  }
-  &-action{
-    // background-color: dodgerblue;
+  &-infoContacto{
+    // background-color: olivedrab;
     @include centerFlex;
-    flex-direction: column;
-    overflow: hidden;
-    .icon{
-      font-size: 3rem;
-      z-index: 11;
-    }
-    .intro{
-      font-size: .8rem;
-      text-align: center;
-
-      p{
-        line-height: 1rem;
-      }
-
-    }
-    .action{
-      @include centerFlex;
-      // background-color: teal;
-      .flecha{
-        width: 5rem;
-        height:3rem;
-        // background-color: darkviolet;
-        background-image: url('./images/flechaVerde.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        animation: flecha 1s infinite ease;
-        @keyframes flecha{
-          to{
-            transform: scale(2)
-          }
-        }
-      }
-    }
-    .actButton{
-      margin-top: 1rem;
-      width: 9rem;
-      height: 1.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 1rem;
-      background-color: $primario;
-      &:hover{
-        background-color: $secundario;
-        a{
-          color: $clTextoGen;
-        }
-      }
-      a{
-        color: $color;
-      }
-    }
   }
 }
 
 @include mQ(xsS){
 }
 @include mQ(smallS){
-  .landingWrap{
+  .heroWrap{
   &-infoCorp{
     .logo{
       // background-color: gold;
@@ -156,7 +101,7 @@
 }
 }
 @include mQ(mediumS){
-  .landingWrap{
+  .heroWrap{
     background-image: url('./images/fondo480.jpg');
     background-size: cover;
     background-position: center right;
@@ -234,7 +179,7 @@
 }
 }
 @include mQ(wideS){
-  .landingWrap{
+  .heroWrap{
     background-image: url('./images/fondo768.jpg');
   &-infoCorp{
     .logo{
@@ -270,7 +215,7 @@
 }
 }
 @include mQ(largeS){
-  .landingWrap{
+  .heroWrap{
     background-image: url('./images/fondoWide.jpg');
   &-infoCorp{
     .slogan{

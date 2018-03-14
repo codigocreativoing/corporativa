@@ -1,9 +1,12 @@
-mixin contacto(texto, telefono, movil)
+mixin contacto(texto, telefono, movil, placeHolder)
   .contact
     .title
       p #{texto}
     .numbers
       p.numbers-phone1 #{telefono}
-    .button
+        i.icon.fa.fa-phone
       p.numbers-phone2 #{movil}
+        i.icon.fa.fa-mobile
+    .boton
+      a(href='#') #{placeHolder}
 
